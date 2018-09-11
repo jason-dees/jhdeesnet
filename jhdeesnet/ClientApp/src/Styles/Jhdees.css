@@ -1,0 +1,54 @@
+body{
+  font-family:Helvetica;
+  background-color:rgb(161,183,204) !important;
+}
+
+#Header{
+  border-bottom: 90px solid;
+  border-color: #cf1c01;
+  border-right:100px solid transparent;
+  height:0px;
+  width:66%;
+}
+#Header div a{
+  color:oldlace;
+  text-decoration:none;
+}
+#Header div{
+  padding-left:20px;
+  font-size:4em;
+  font-weight:bold;
+  text-align:left;
+  height:72px;
+}
+.navbar{
+    border-radius:0px !important;
+    box-shadow: none !important;
+    border:none !important;
+}
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    box-shadow:none !important;
+}
+.btn{
+  border-radius:0px !important;
+}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  border-radius:0px !important;
+}
+
+.hide{
+  display:none;
+}
+.pull-right{
+  float:right;
+}
+.clear-both{
+  clear:both;
+}
+
+.Section{
+    margin:auto 50px;
+}
+a{
+    cursor: pointer;
+}

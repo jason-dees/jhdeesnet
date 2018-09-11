@@ -1,14 +1,21 @@
-﻿import React from 'react';
-import { Route } from 'react-router';
-import Layout from './components/Layout';
-import Home from './components/Home';
-import Counter from './components/Counter';
-import FetchData from './components/FetchData';
+import management from './Reducers/management.js';
+import { createStore } from 'redux';
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import Jhdees from './components/Jhdees.js';
 
-export default () => (
-  <Layout>
-    <Route exact path='/' component={Home} />
-    <Route path='/counter' component={Counter} />
-    <Route path='/fetchdata/:startDateIndex?' component={FetchData} />
-  </Layout>
-);
+const store = createStore(management);
+
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <Provider store={store}>
+                    <Jhdees />
+                </Provider>
+            </div>
+        );
+    }
+}
+
+export default App;
