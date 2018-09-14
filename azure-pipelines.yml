@@ -1,26 +1,39 @@
-# ASP.NET
-# Build and test ASP.NET web applications.
-# Add steps that publish symbols, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/vsts/pipelines/apps/aspnet/build-aspnet-4
-
-pool:
-  vmImage: 'VS2017-Win2016'
-
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+queue:
+  name: Hosted VS2017
+  demands: npm
 
 steps:
-- task: NuGetToolInstaller@0
-
-- task: NuGetCommand@2
+- task: Npm@1
+  displayName: 'npm install'
   inputs:
-    restoreSolution: '$(solution)'
+    workingDir: Site/ClientApp
 
-- task: VSBuild@1
+    verbose: false
+
+
+- task: Npm@1
+  displayName: 'npm custom'
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: custom
+
+    workingDir: Site/ClientApp
+
+    verbose: false
+
+    customCommand: 'run build'
+
+
+- task: ArchiveFiles@1
+  displayName: 'Archive files'
+  inputs:
+    rootFolder: Site/ClientApp/build
+
+    includeRootFolder: false
+
+    archiveType: zip
+
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+
+
