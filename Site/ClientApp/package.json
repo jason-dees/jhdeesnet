@@ -1,17 +1,22 @@
 {
-  "name": "newjhdeescom",
+  "name": "jhdeesnet",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "d3": "^4.11.0",
     "jquery": "^3.2.1",
     "prop-types": "^15.6.2",
     "react": "^15.6.1",
+    "react-bootstrap": "^0.31.3",
+    "react-d3-basic": "^1.6.11",
+    "react-d3-tooltip": "^1.4.14",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "redux-devtools": "^3.4.0",
     "underscore": "^1.8.3",
-    "webpack": "^3.11.0"
+    "webpack": "^3.12.0"
   },
   "devDependencies": {
     "react-scripts": "^1.1.5"
