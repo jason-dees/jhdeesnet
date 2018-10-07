@@ -54,7 +54,7 @@ class JhdeesMenu extends Component{
             <div>
                 <div id="Header">
                     <div>
-                        <a href="/">www.jhdees.com</a>
+                        <a href="/">A Cool Place To Be</a>
                     </div>
                 </div>
                 <nav className="navbar navbar-default">

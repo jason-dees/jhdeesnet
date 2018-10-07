@@ -13,11 +13,11 @@ class Card extends Component {
                         <h1>Jason Dees</h1>
                         <div className="clear-both" />
                         <h3 id="PositionTitle">Software Developer</h3>
-                        <h4 id="Tech">.NET &middot; Xamarin </h4>
+                        <h4 id="Tech">.NET &middot; Xamarin &middot; react</h4>
                     </div>
                     <div id="ContactInfo">
                         <span>jhdees@gmail.com</span>
-                        <span>www.jhdees.com</span>
+                        <span>github.com/jhdees</span>
                     </div>
                 </div>
             </Section>

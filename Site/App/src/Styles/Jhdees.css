@@ -1,14 +1,14 @@
-body{
-  font-family:Helvetica;
-  background-color:rgb(161,183,204) !important;
+body {
+	font-family: Helvetica;
+	background-color: lightsteelblue !important;
 }
 
-#Header{
-  border-bottom: 90px solid;
-  border-color: #cf1c01;
-  border-right:100px solid transparent;
-  height:0px;
-  width:66%;
+#Header {
+	border-bottom: 90px solid;
+	border-color: midnightblue;
+	border-right: 100px solid transparent;
+	height: 0px;
+	display: inline-block;
 }
 #Header div a{
   color:oldlace;
