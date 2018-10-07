@@ -25,7 +25,7 @@ namespace jhdeesnet
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = "ClientApp/build";
+                configuration.RootPath = "App/build";
             });
         }
 
@@ -55,7 +55,7 @@ namespace jhdeesnet
 
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = "ClientApp";
+                spa.Options.SourcePath = "App";
 
                 if (env.IsDevelopment())
                 {
