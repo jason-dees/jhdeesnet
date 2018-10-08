@@ -5,6 +5,7 @@ import '../Styles/Jhdees.css';
 import FacebookLogo from '../Images/facebook.png';
 import Card from './Section/Card.js';
 import Image from './Section/Image.js';
+import Recipes from './Section/Recipe.js';
 import {goToIndex, Pages} from '../Actions/siteactions.js'
 import _ from 'underscore';
 import '../bootstrap/css/bootstrap.min.css';
@@ -18,7 +19,7 @@ class Jhdees extends Component {
     render() {
         const { activePage, dispatch } = this.props;
 
-        let sections = [<Card />,  <Image />];
+        let sections = [<Card />,  <Image />, <Recipes />];
 
         return (
             <div className="Jhdees">
@@ -30,7 +31,7 @@ class Jhdees extends Component {
 }
 
 const mapStateToProps = state => {
-    const { activePage } = state;
+    const { activePage } = state.nav;
 
     return { activePage };
 };
@@ -53,7 +54,7 @@ class JhdeesMenu extends Component{
             <div>
                 <div id="Header">
                     <div>
-                        <a href="/">www.jhdees.com</a>
+                        <a href="/">A Small Pile of Legos</a>
                     </div>
                 </div>
                 <nav className="navbar navbar-default">
@@ -64,10 +65,7 @@ class JhdeesMenu extends Component{
                            </li>)
                         }
                         <li>
-                            <a href="https://recipes.jhdees.com">Recipes</a>
-                        </li>
-                        <li>
-                            <a href="https://stuffonharold.jhdees.com">Stuff On Harold</a>
+                            <a href="https://stuffonharold.azurewebsites.net">Stuff On Harold</a>
                         </li>
                         <li>
                             <a href="https://github.com/jhdees/">GitHub</a>
