@@ -1,1 +1,1 @@
-[My Site, In Azure](https://jhdeesnet.azurewebsites.net/)
+[My Site, In Azure](https://jhdees.azurewebsites.net/)

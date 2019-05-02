@@ -68,7 +68,7 @@ class JhdeesMenu extends Component{
                             <a href="https://stuffonharold.azurewebsites.net">Stuff On Harold</a>
                         </li>
                         <li>
-                            <a href="https://github.com/jhdees/">GitHub</a>
+                            <a href="https://github.com/jason-dees/">GitHub</a>
                         </li>
                     </ul>
                     <ul className="nav navbar-nav pull-right hide">
