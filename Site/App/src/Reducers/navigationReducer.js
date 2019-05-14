@@ -16,7 +16,7 @@ export default (state = {activePage: defaultActivePage}, action) =>{
 }
 
 function getInitialActivePage(){
-    var hash = window.location.hash.replace("#", ""); 
+    var hash = window.location.pathname.replace("/", ""); 
     if(_.contains(Pages, hash)){
         return hash;
     }

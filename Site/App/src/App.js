@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import Jhdees from './components/Jhdees.js';
 import reducer from './Reducers/reducer.js';
 import thunk from 'redux-thunk';
+import { BrowserRouter } from 'react-router-dom';
 
 const middleware = [ thunk ];
 
@@ -16,7 +17,9 @@ class App extends Component {
         return (
             <div>
                 <Provider store={store}>
-                    <Jhdees />
+                    <BrowserRouter>
+                        <Jhdees />
+                    </BrowserRouter>
                 </Provider>
             </div>
         );

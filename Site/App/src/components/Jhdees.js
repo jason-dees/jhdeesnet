@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
+import { Route } from 'react-router';
+
 import '../Styles/Jhdees.css';
-import FacebookLogo from '../Images/facebook.png';
 import Card from './Section/Card.js';
 import Image from './Section/Image.js';
 import Recipes from './Section/Recipe.js';
 import {goToIndex, Pages} from '../Actions/siteactions.js'
-import _ from 'underscore';
 import '../bootstrap/css/bootstrap.min.css';
 
 class Jhdees extends Component {
@@ -18,13 +18,13 @@ class Jhdees extends Component {
 
     render() {
         const { activePage, dispatch } = this.props;
-
-        let sections = [<Card />,  <Image />, <Recipes />];
-
         return (
             <div className="Jhdees">
                 <JhdeesMenu dispatch={dispatch} activePage={activePage} menuItems={Pages} />
-                {sections[_.indexOf(Pages,activePage)]}
+                <Route exact path='/' component={Card} />
+                <Route exact path='/My Card' component={Card} />
+                <Route exact path='/image' component={Image} />
+                <Route exact path='/recipes' component={Recipes} />
             </div>
         );
     }
@@ -61,7 +61,7 @@ class JhdeesMenu extends Component{
                     <ul className="nav navbar-nav">
                         {menuItems.map((item, index) =>
                            <li key={item} className={activePage === item ? "active": ""}>
-                               <a onClick={this.goTo.bind(this, item)} href={"#" + item}>{item}</a>
+                               <a onClick={this.goTo.bind(this, item)} href={item}>{item}</a>
                            </li>)
                         }
                         <li>
@@ -69,11 +69,6 @@ class JhdeesMenu extends Component{
                         </li>
                         <li>
                             <a href="https://github.com/jason-dees/">GitHub</a>
-                        </li>
-                    </ul>
-                    <ul className="nav navbar-nav pull-right hide">
-                        <li>
-                            <img width="32" src={FacebookLogo} alt="Facebook Icon" />
                         </li>
                     </ul>
                 </nav>
